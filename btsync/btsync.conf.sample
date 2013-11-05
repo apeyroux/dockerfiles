@@ -1,0 +1,16 @@
+{
+    "device_name": "box",
+    "listening_port" : 3369, 
+    "storage_path" : "/data/btsync/.btsync/",
+    "check_for_updates" : false, 
+    "use_upnp" : false,
+    "download_limit" : 0, 
+    "upload_limit" : 0, 
+    "webui" :
+    {
+        "listen" : "0.0.0.0:8888",
+        "login" : "xxxxxxxx",
+        "password" : "xxxxxxxx"
+    } 
+}
+
