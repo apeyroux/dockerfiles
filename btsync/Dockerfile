@@ -1,13 +1,16 @@
-from         ubuntu
-maintainer   j4
+from         j4pe/saucy
+maintainer   j4pe
 
 RUN dpkg-divert --local --rename --add /sbin/initctl
 RUN ln -s /bin/true /sbin/initctl
 
-RUN apt-get install python-software-properties -y
+RUN echo "deb http://archive.ubuntu.com/ubuntu saucy main universe" > /etc/apt/sources.list
+RUN apt-get update
+RUN apt-get upgrade -y 
+RUN apt-get install software-properties-common python-software-properties -y 
 RUN add-apt-repository ppa:tuxpoldo/btsync -y
 RUN apt-get update
-RUN export DEBIAN_FRONTEND=noninteractive; apt-get install btsync -y -q
+RUN export DEBIAN_FRONTEND=noninteractive; apt-get install btsync -y 
 RUN rm -f /etc/btsync/debconf-default.conf
 RUN mkdir -p /data/btsync
 RUN mkdir -p /data/.btsync
