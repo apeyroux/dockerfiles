@@ -1,0 +1,4 @@
+server {
+	server_name j4.pe;
+	root /home/ja/www/j4.pe/;
+}
