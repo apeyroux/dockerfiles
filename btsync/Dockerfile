@@ -10,7 +10,7 @@ RUN apt-get upgrade -y
 RUN apt-get install software-properties-common python-software-properties -y 
 RUN add-apt-repository ppa:tuxpoldo/btsync -y
 RUN apt-get update
-RUN export DEBIAN_FRONTEND=noninteractive; apt-get install btsync -y 
+RUN export DEBIAN_FRONTEND=noninteractive; apt-get install btsync -y  --force-yes
 RUN rm -f /etc/btsync/debconf-default.conf
 RUN mkdir -p /data/btsync
 RUN mkdir -p /data/.btsync

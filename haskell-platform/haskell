@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker run -u ja -h haskell -i -v=/home/ja:/home/ja -e=HOME=/home/ja -t j4pe/haskell-platform bash
